@@ -71,7 +71,7 @@ Key Processing Steps:
 
     The stream is iterated, reading two bytes at a time and interpreting them as a single qint16 (signed 16-bit integer).
 
-    A fixed offset is applied to each sample, as shown below. This suggests the input data from the serial device is in a format where the zero point is not at 0, but rather at -32768. The code adds 32768 to shift the values to a 0-65535 range before storing them in the final samples vector.
+    A fixed offset is applied to each sample, as shown below. This suggests the input data from the serial device is in a format where the zero point is not at 0, but rather at -32768. The code adds 32768 to shift the values to a 0-65535 range before storing them in the final samples vector. <<<SPECIFIC  HARDWARE DESIGN RELEVENT HERE >>
 
     qint16 sample;
     stream >> sample;
