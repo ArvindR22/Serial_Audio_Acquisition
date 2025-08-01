@@ -75,9 +75,9 @@ Key Processing Steps:
 
     qint16 sample;
     stream >> sample;
-    samples.append(sample + 32768); // Convert to unsigned offset binary (This is not entirely true, this is converting signed to unsigned, however in the write part this is not applied)
+    samples.append(sample + 32768); 
 
-Note: The comment // Convert to unsigned offset binary is a bit of a misnomer, as the WAV header that is created specifies a SignedInt format. This processing step may be a remnant of a different data handling strategy. For most standard audio formats, this offset is not necessary. Users should be aware of this and may need to remove this line if their serial device outputs standard signed 16-bit data.
+
 3. WAV File Output Format
 
 The saveAsWav() function constructs a standard WAV file header and writes the processed data. The header ensures compatibility with most audio players and editors.
